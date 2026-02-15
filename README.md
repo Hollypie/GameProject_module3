@@ -14,6 +14,15 @@
 
 {Describe the tools that you used to develop the software}
 
+Unity Hub 3.16.1 gaming framework
+VS code
+Unity extension in VScode 
+Github
+Git
+C#
+
+Even though the code is in C#, this is not a .NET project. The extension used is a Unity extension.
+
 {Describe the programming language that you used}
 
 # Useful Websites
@@ -31,3 +40,5 @@
 - [Web Site Name](http://url.link.goes.here)
 - [Web Site Name](http://url.link.goes.here)
 - [Web Site Name](http://url.link.goes.here)
+
+2/3/26 - 3 hours, researching Unity and installing the necessary software. Created the github repo and started the project in VScode. Reviewing and watching tutorial videos on creating a Unity 2d project. 
