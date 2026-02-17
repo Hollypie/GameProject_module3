@@ -1,16 +1,36 @@
 using UnityEngine;
 
-public class ComputerPaddle : MonoBehaviour
+public class ComputerPaddle : Paddle
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Rigidbody2D ball;
+    private void FixedUpdate()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Check if the ball is moving towards the paddle (positive x velocity)
+        // or away from the paddle (negative x velocity)
+        if (ball.linearVelocity.x > 0f)
+        {
+            // Move the paddle in the direction of the ball to track it
+            if (ball.position.y > rb.position.y)
+            {
+                rb.AddForce(Vector2.up * speed);
+            }
+            else if (ball.position.y < rb.position.y)
+            {
+                rb.AddForce(Vector2.down * speed);
+            }
+        }
+        else
+        {
+            // Move towards the center of the field and idle there until the
+            // ball starts coming towards the paddle again
+            if (rb.position.y > 0f)
+            {
+                rb.AddForce(Vector2.down * speed);
+            }
+            else if (rb.position.y < 0f)
+            {
+                rb.AddForce(Vector2.up * speed);
+            }
+        }
     }
 }
