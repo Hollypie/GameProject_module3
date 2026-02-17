@@ -12,11 +12,24 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text playerScoreText;
     [SerializeField] private TMP_Text computerScoreText;
 
+    [Header("Audio")]
+    public AudioClip scoreSound;         // Drag your scoring .wav here
+    public float scoreVolume = 0.4f;
+    private AudioSource audioSource;
+
     private int playerScore;
     private int computerScore;
 
     private void Start()
     {
+        // Setup audio source
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        audioSource.playOnAwake = false;
+
         NewGame();
     }
 
@@ -53,14 +66,26 @@ public class GameManager : MonoBehaviour
     public void OnPlayerScored()
     {
         SetPlayerScore(playerScore + 1);
+
+        // Play scoring sound
+        if (scoreSound != null)
+            audioSource.PlayOneShot(scoreSound, scoreVolume);
+
         Debug.Log(playerScore);
+
         NewRound();
     }
 
     public void OnComputerScored()
     {
         SetComputerScore(computerScore + 1);
+
+        // Play scoring sound
+        if (scoreSound != null)
+            audioSource.PlayOneShot(scoreSound, scoreVolume);
+
         Debug.Log(computerScore);
+
         NewRound();
     }
 
