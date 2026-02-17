@@ -215,7 +215,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1708284462}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnPlayerScored
+        m_MethodName: OnComputerScored
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -807,7 +807,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1708284462}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnComputerScored
+        m_MethodName: OnPlayerScored
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 1203951526}
   m_Layer: 0
   m_Name: Player Paddle
-  m_TagString: Untagged
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -979,7 +979,7 @@ Transform:
   m_GameObject: {fileID: 1203951520}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 0, z: 0}
+  m_LocalPosition: {x: -10, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1029,7 +1029,7 @@ GameObject:
   - component: {fileID: 1346612734}
   m_Layer: 0
   m_Name: Computer Paddle
-  m_TagString: Untagged
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1175,7 +1175,7 @@ Transform:
   m_GameObject: {fileID: 1346612728}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1528,6 +1528,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ball
   baseSpeed: 5
   maxSpeed: Infinity
+  paddleHitSound: {fileID: 8300000, guid: 2e61d4e17a82a47429c36c7c31893791, type: 3}
+  paddleHitVolume: 0.7
 --- !u!1 &1708284461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,8 +1562,8 @@ MonoBehaviour:
   ball: {fileID: 1582966316}
   playerPaddle: {fileID: 1203951525}
   computerPaddle: {fileID: 1346612733}
-  playerScoreText: {fileID: 0}
-  computerScoreText: {fileID: 0}
+  playerScoreText: {fileID: 1834224452}
+  computerScoreText: {fileID: 1382379946}
 --- !u!4 &1708284463
 Transform:
   m_ObjectHideFlags: 0

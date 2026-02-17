@@ -1,22 +1,42 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+
 public class Ball : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private AudioSource audioSource;
 
     public float baseSpeed = 5f;
     public float maxSpeed = Mathf.Infinity;
     public float currentSpeed { get; set; }
 
+    [Header("Audio")]
+    public AudioClip paddleHitSound; // Drag your .wav here in Inspector
+    public float paddleHitVolume = 0.7f;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        audioSource.playOnAwake = false;
     }
 
     private void Start()
     {
         ResetPosition();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Paddle") && paddleHitSound != null)
+        {
+            audioSource.PlayOneShot(paddleHitSound, paddleHitVolume);
+        }
     }
 
     public void ResetPosition()
