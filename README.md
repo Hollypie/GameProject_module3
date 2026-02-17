@@ -16,7 +16,7 @@
 
 Unity Hub 3.16.1 gaming framework
 VS code
-Unity extension in VScode 
+Unity extension in VScode
 Github
 Git
 C#
@@ -31,8 +31,8 @@ Even though the code is in C#, this is not a .NET project. The extension used is
 
 - [Pong in Unity Video](https://www.youtube.com/watch?v=AcpaYq0ihaM)
 - [Unity for first time users](https://docs.unity3d.com/Manual/first-time-user.html)
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+- [Learn Unity site](https://learn.unity.com/course/2d-beginner-game-sprite-flight)
+- [My finished tutorial game project](https://play.unity.com/en/games/9ce95fda-eb2b-4c48-ba55-da5aed69eb7c/web-builds)
 - [Web Site Name](http://url.link.goes.here)
 - [Web Site Name](http://url.link.goes.here)
 - [Web Site Name](http://url.link.goes.here)
@@ -41,4 +41,4 @@ Even though the code is in C#, this is not a .NET project. The extension used is
 - [Web Site Name](http://url.link.goes.here)
 - [Web Site Name](http://url.link.goes.here)
 
-2/3/26 - 3 hours, researching Unity and installing the necessary software. Created the github repo and started the project in VScode. Reviewing and watching tutorial videos on creating a Unity 2d project. 
+2/3/26 - 3 hours, researching Unity and installing the necessary software. Created the github repo and started the project in VScode. Reviewing and watching tutorial videos on creating a Unity 2d project.
