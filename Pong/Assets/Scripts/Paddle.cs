@@ -1,19 +1,25 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+
+// This is the parent class for both the Computer and Player paddles. It is an abstract class because it is never actually instantiated on its own, but always as an inherited class. 
 public abstract class Paddle : MonoBehaviour
 {
     protected Rigidbody2D rb;
 
+    // Changes how the ball bounces off the paddle depending on where it hits the paddle.
+    // The further from the center of the paddle, the steeper the bounce angle.
     public float speed = 8f;
-    [Tooltip("Changes how the ball bounces off the paddle depending on where it hits the paddle. The further from the center of the paddle, the steeper the bounce angle.")]
+
     public bool useDynamicBounce = false;
 
+    // This code makes sure your script has a reference to the Rigidbody2D attached to the same object so you can control physics for that object later.
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
+    // Returns the paddles to the center. Used when a new game is started and when a new round has begun.
     public void ResetPosition()
     {
         rb.linearVelocity = Vector2.zero;

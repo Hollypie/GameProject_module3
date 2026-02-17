@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Our Computer paddle inherits from the paddle class. This code creates a basic AI for the user to play against.  The paddle returns to center when the ball is moving away from it to give it a more human like behavior rather than just going towards the movement of the ball all the time. Multiplies the ball’s speed by the bounce strength.
 public class ComputerPaddle : Paddle
 {
     public Rigidbody2D ball;

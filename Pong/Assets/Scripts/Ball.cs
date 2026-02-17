@@ -1,7 +1,9 @@
 using UnityEngine;
 
+// It tells Unity that any GameObject with this script must also have a Rigidbody2D component attached.
 [RequireComponent(typeof(Rigidbody2D))]
 
+// ball class that assigns the attributes of sound and various speeds. 
 public class Ball : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -12,9 +14,10 @@ public class Ball : MonoBehaviour
     public float currentSpeed { get; set; }
 
     [Header("Audio")]
-    public AudioClip paddleHitSound; // Drag your .wav here in Inspector
-    public float paddleHitVolume = 0.7f;
+    public AudioClip paddleHitSound;
+    public float paddleHitVolume = 0.4f;
 
+    // Method that instantiates the rb component and tells the sound to not play on load.
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,11 +29,13 @@ public class Ball : MonoBehaviour
         audioSource.playOnAwake = false;
     }
 
+    // Begins the game again.
     private void Start()
     {
         ResetPosition();
     }
 
+    // detects collisions so that the sound event is triggered.
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Paddle") && paddleHitSound != null)
@@ -39,12 +44,14 @@ public class Ball : MonoBehaviour
         }
     }
 
+    // method to reset the starting position of the ball and its random direction.
     public void ResetPosition()
     {
         rb.linearVelocity = Vector2.zero;
         rb.position = Vector2.zero;
     }
 
+    // Adds a force to the ball so that it begins moving on load.
     public void AddStartingForce()
     {
         // Flip a coin to determine if the ball starts left or right
