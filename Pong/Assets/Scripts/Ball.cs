@@ -16,8 +16,9 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
-        AddStartingForce();
+        ResetPosition();
     }
+
     public void ResetPosition()
     {
         rb.linearVelocity = Vector2.zero;
