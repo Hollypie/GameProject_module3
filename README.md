@@ -12,9 +12,7 @@ I did spend time learning how to use Unity, this is the pre-project that I creat
 
 # Demo video
 
-{Provide a link to your YouTube demonstration. It should be a one minute demo of the software running and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Pong Demo Video](https://www.loom.com/share/bd307d4c52e14d7eb679cb10bbff2292)
 
 # How to View the Project
 
