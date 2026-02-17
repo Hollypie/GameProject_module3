@@ -424,7 +424,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -449,7 +449,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1244,7 +1244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 160, y: -50}
+  m_AnchoredPosition: {x: 160, y: -100}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1382379946
@@ -1529,7 +1529,7 @@ MonoBehaviour:
   baseSpeed: 5
   maxSpeed: Infinity
   paddleHitSound: {fileID: 8300000, guid: 2e61d4e17a82a47429c36c7c31893791, type: 3}
-  paddleHitVolume: 0.7
+  paddleHitVolume: 0.4
 --- !u!1 &1708284461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,6 +1564,8 @@ MonoBehaviour:
   computerPaddle: {fileID: 1346612733}
   playerScoreText: {fileID: 1834224452}
   computerScoreText: {fileID: 1382379946}
+  scoreSound: {fileID: 8300000, guid: 9415ed0ed583a3f46a65f00e28a38a1c, type: 3}
+  scoreVolume: 0.4
 --- !u!4 &1708284463
 Transform:
   m_ObjectHideFlags: 0
@@ -1613,7 +1615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -150, y: -50}
+  m_AnchoredPosition: {x: -150, y: -100}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834224452

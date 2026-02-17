@@ -8,7 +8,7 @@ This has been a fun project and a great introduction to creating 2D games in Uni
 
 My Pong game operates similarly to the classic arcade version. The player moves the left paddle up and down using the arrow keys, while the right paddle is controlled by a basic AI. The AI works well initially, but the speed and bounce of the ball increase with each round, making the game progressively more challenging. Scores for both the player and the computer are displayed at the top of the screen on their respective sides. The tutorials I followed did not cover adding sound, so I implemented audio feedback myself for paddle hits and scoring.
 
-I did spend time learning how to use Unity, this is the pre-project that I created through tutorials and challenges that helped me do that.  This is the Unity Play link for it: https://play.unity.com/en/games/9ce95fda-eb2b-4c48-ba55-da5aed69eb7c/web-builds
+I did spend time learning how to use Unity, this is the pre-project that I created through tutorials and challenges that helped me do that. This is the Unity Play link for it: https://play.unity.com/en/games/9ce95fda-eb2b-4c48-ba55-da5aed69eb7c/web-builds
 
 # Demo video
 
@@ -20,7 +20,8 @@ I did spend time learning how to use Unity, this is the pre-project that I creat
 
 You can play the game directly in your web browser using the Unity Play link below—no installation is required. Simply click the link, and the game will load.
 
-
+GAME LINK
+https://play.unity.com/en/games/655580bc-dd6a-4041-8c83-05e9d18c46b2/pong
 
 Instructions for playing:
 
